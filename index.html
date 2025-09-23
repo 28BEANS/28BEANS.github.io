@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>beans | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  
 </head>
 <body>
   <header>
     <h1>beans</h1>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -45,8 +49,7 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
-
-        <div class="project-card">
+      <div class="project-card">
         <h3>Fitness Web App</h3>
         <p>A website for gym goers and fitness enthusiasts that want to organize their workout routines, track their meals, and monitor their weight. Built with Flask, Jinja, and SQLite.</p>
         <a href="https://github.com/28BEANS/fitness-website">GitHub</a>
@@ -64,7 +67,7 @@
     <h2>In Progress</h2>
     <p>Here are projects I'm actively working on. They're not finished yet, but they show what I'm currently learning and building.</p>
     <div class="projects-grid">
-        <div class="project-card">
+      <div class="project-card">
         <h3>Expense Splitter App</h3>
         <p>A web app to track and split expenses among friends. Built with MERN stack.</p>
         <a href="https://github.com/kirkdencv/shared-expense-splitter">GitHub</a>
@@ -93,5 +96,14 @@
   <footer>
     <p>© 2025 Vince Evangelista. All rights reserved.</p>
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
