@@ -1,9 +1,10 @@
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #f1f5f9;
+  background: #0e1e12;
+  color: #e6f4ea;
   line-height: 1.6;
 }
 
@@ -15,14 +16,14 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(15,23,42,0.9);
+  background: rgba(16, 44, 24, 0.92);
   backdrop-filter: blur(8px);
   z-index: 1000;
 }
 
 header h1 {
   font-size: 1.5rem;
-  color: #38bdf8;
+  color: #34d399;
 }
 
 nav {
@@ -30,21 +31,21 @@ nav {
 }
 
 nav a {
-  color: #f1f5f9;
+  color: #e6f4ea;
   margin-left: 20px;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-nav a:hover { color: #38bdf8; }
+nav a:hover { color: #34d399; }
 
 a:not(nav a){
   text-decoration: none;
-  color: rgb(164, 78, 234);
+  color: #22c55e;
 }
 
-a:not(nav a):hover{
-  color: green;
+a:not(nav a, .btn):hover{
+  color: #98a5f5;
 }
 
 section {
@@ -70,18 +71,18 @@ section {
   max-width: 600px;
 }
 
-.btn {
+ .btn {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: #38bdf8;
-  color: #0f172a;
+  background: #34d399;
+  color: #0e1e12;
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s;
 }
 
-.btn:hover { background: #0ea5e9; }
+.btn:hover { background: #22c55e; }
 
 #about, #projects, #in-progress, #contact {
   max-width: 900px;
@@ -97,7 +98,7 @@ section {
 
 .skill {
   padding: 8px 15px;
-  background: #1e293b;
+  background: #14532d;
   border-radius: 6px;
   font-size: 0.9rem;
 }
@@ -110,7 +111,7 @@ section {
 }
 
 .project-card {
-  background: #1e293b;
+  background: #14532d;
   padding: 20px;
   border-radius: 12px;
   transition: transform 0.3s;
@@ -118,13 +119,13 @@ section {
 
 .project-card:hover { transform: translateY(-5px); }
 
-.project-card h3 { color: #38bdf8; }
+.project-card h3 { color: #34d399; }
 
 footer {
   text-align: center;
   padding: 30px;
-  background: #0f172a;
-  color: #94a3b8;
+  background: #0e1e12;
+  color: #a7f3d0;
 }
 
 
@@ -133,7 +134,7 @@ footer {
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: #f1f5f9;
+  color: #e6f4ea;
   cursor: pointer;
 }
 
@@ -142,7 +143,7 @@ footer {
     position: absolute;
     top: 70px;
     right: 20px;
-    background: #1e293b;
+    background: #14532d;
     border-radius: 8px;
     padding: 10px;
     display: none; 
