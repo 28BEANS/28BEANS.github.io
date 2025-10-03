@@ -1,167 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: Arial, sans-serif;
-  background: #0e1e12;
-  color: #e6f4ea;
-  line-height: 1.6;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+body{
+    scroll-behavior: smooth;
+    padding-top: 58.5px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(16, 44, 24, 0.92);
-  backdrop-filter: blur(8px);
-  z-index: 1000;
+#navbar{
+    width: 100%;
+    height: 58.5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    background-color: lightgray; 
 }
 
-header h1 {
-  font-size: 1.5rem;
-  color: #34d399;
+#navbar ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 20px;
 }
 
-nav {
-  display: flex;
+#navbar ul li a{
+    text-decoration: none;
+    color: black;
 }
 
-nav a {
-  color: #e6f4ea;
-  margin-left: 20px;
-  text-decoration: none;
-  transition: color 0.3s;
+.spacer{
+    flex: 1;
 }
 
-nav a:hover { color: #34d399; }
-
-a:not(nav a){
-  text-decoration: none;
-  color: #22c55e;
-}
-
-a:not(nav a, .btn):hover{
-  color: #98a5f5;
-}
-
-section {
-  padding: 100px 50px;
-  min-height: 100vh;
-}
-
-#home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#home h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-#home p {
-  font-size: 1.2rem;
-  max-width: 600px;
-}
-
- .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #34d399;
-  color: #0e1e12;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn:hover { background: #22c55e; }
-
-#about, #projects, #in-progress, #contact {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.skill {
-  padding: 8px 15px;
-  background: #14532d;
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.project-card {
-  background: #14532d;
-  padding: 20px;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
-
-.project-card:hover { transform: translateY(-5px); }
-
-.project-card h3 { color: #34d399; }
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #0e1e12;
-  color: #a7f3d0;
-}
-
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: #e6f4ea;
-  cursor: pointer;
-}
-
-@media(max-width: 768px) {
-  nav {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #14532d;
-    border-radius: 8px;
-    padding: 10px;
-    display: none; 
+#welcome-section{
+    height: 100vh;
+    background-image: url("https://github.com/28BEANS/media/blob/54572cda2b399dc9e2ace7eae15e67fbaab1c879/chrome-metal-bg.jpg?raw=true");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
 
-  nav.show {
-    display: flex; 
-  }
+#message-container{
+    background-color: rgba(246, 244, 244, 0.174);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0));
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%;
+}
 
-  .menu-toggle {
-    display: block;
-  }
+#message-container h1{
+    font-family: "DM Serif Display", serif;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    transition: text-shadow 0.4s ease;
+    line-height: 1em;
+    margin: 0 auto 30px auto;
+    color: #fff;
+}
 
-  header {
-    padding: 15px 20px;
-  }
+#message-container:hover h1{
+    text-shadow: 
+        2px 2px 0 #c77f35, 
+        4px 4px 0 #9a622a,  
+        6px 6px 0 #70461d,   
+        6px 6px 8px rgba(0,0,0,0.7); 
+    transition: text-shadow 0.4s ease;
+}
 
-  #home h2 { font-size: 2rem; }
+#message-container p{
+    width: 80%;
+    margin:  0 auto;
+}
+
+.symbol{
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(163, 65, 0);
+    margin: 0 7px;
+}
+
+#projects{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+#projects h2{
+    font-family: "DM Serif Display", serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.project-tile{
+    background-color: rgb(211, 211, 211);
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s ease;
+}
+
+.project-tile:hover {
+    transform: translateY(-10px); 
+    transition: transform 0.3s ease;
+}
+
+.project-tile:nth-of-type(1){
+    background-image: url("https://github.com/28BEANS/media/blob/c15cc4bd2113262274d0f508404c3ccc6bd57ec6/survey-form.png?raw=true");
+}
+
+.project-tile:nth-of-type(2){
+    background-image: url("https://github.com/28BEANS/media/blob/c15cc4bd2113262274d0f508404c3ccc6bd57ec6/trib-page.png?raw=true");
+
+}
+
+.project-tile:nth-of-type(3){
+    background-image: url("https://github.com/28BEANS/media/blob/c15cc4bd2113262274d0f508404c3ccc6bd57ec6/doc-page.png?raw=true");
+}
+
+.project-tile:nth-of-type(4){
+    background-image: url("https://github.com/28BEANS/media/blob/c15cc4bd2113262274d0f508404c3ccc6bd57ec6/scent-studio.png?raw=true");
+}
+
+.project-tile:nth-of-type(5){
+    background-image: url("https://github.com/28BEANS/media/blob/9ac83ac5a0ef4dac2bf9e499543f30a59beee9fd/fittrack-home.png?raw=true");
+}
+
+.project-tile:nth-of-type(6){
+    background-image: url("https://github.com/28BEANS/media/blob/9ac83ac5a0ef4dac2bf9e499543f30a59beee9fd/shared-expense-home.png?raw=true");
+}
+
+.project-tile:nth-of-type(7){
+    background-image: url("https://github.com/28BEANS/media/blob/9ac83ac5a0ef4dac2bf9e499543f30a59beee9fd/audreytoo-home.png?raw=true");
+}
+
+.desc-box{
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.4) 30%,  
+        rgba(0,0,0,0.6) 60%,    
+        rgba(0,0,0,0.8) 85%,    
+        rgba(0,0,0,1) 100%      
+    );
+    height: 20%;
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 30px 30px;
+    text-align: center;
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-box a{
+    text-decoration: none;
+    color: white;
+}
+
+.desc-box span{
+    font-weight: bold;
+    font-size: 30px;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+.desc-box p:hover span{
+    color: #c77f35;
+    transition: color 0.3s ease;
+}
+
+#contact{
+    height: calc(100vh - 58.5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://github.com/28BEANS/media/blob/54572cda2b399dc9e2ace7eae15e67fbaab1c879/chrome-metal-bg.jpg?raw=true");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#contact #contact-desc h2{
+    font-family: "DM Serif Display", serif;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#contact-desc, #contact-channels{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-desc-container{
+    background-color: rgba(246, 244, 244, 0.174);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0));
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#contact-channels{
+    gap: 20px;
+    align-items: flex-start;
+    margin-left: 10%;
+}
+
+.contact-tiles{
+    display: flex;
+    align-items: center;
+    background-color: rgba(229, 229, 229, 0.913);
+    width: 40%;
+    padding: 10px 0;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.contact-tiles:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.contact-tiles img{
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+    filter: brightness(0) invert(0);
+}
+
+.contact-tiles a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.contact-tiles a:hover{
+    color: #c77f35;
+}
+
+footer{
+    height: 35px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) {
+    #message-container {
+        width: 70%;
+    }
+
+    #message-container h1 {
+        font-size: 40px;
+    }
+
+    #projects h2, 
+    #contact #contact-desc h2 {
+        font-size: 32px;
+    }
+
+    #contact-desc, 
+    #contact-channels {
+        width: 70%;
+    }
+
+    .contact-tiles {
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        align-items: center;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    #message-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #message-container h1 {
+        font-size: 28px;
+    }
+
+    #projects {
+        padding: 50px 0;
+    }
+
+    #projects h2 {
+        font-size: 28px;
+    }
+
+    .project-tile {
+        height: 40vh;
+    }
+
+    .desc-box span {
+        font-size: 20px;
+    }
+
+    #contact {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #contact-desc, 
+    #contact-channels {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-tiles {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .contact-tiles img {
+        margin: 0 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
 }

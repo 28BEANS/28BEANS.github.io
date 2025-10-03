@@ -1,109 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>beans | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>beans</h1>
 
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      ☰
-    </button>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#in-progress">In Progress</a>
-      <a href="#contact">Contact</a>
+    <nav id="navbar" class="nav">
+        <ul>
+            <li><a href="#welcome-section">Welcome</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <section id="home">
-    <h2>Hello, I'm <span>Vince!</span></h2>
-    <p>A Computer Science student passionate about building software and solving problems through code.</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a programming enthusiast who loves working with web technologies and exploring different areas of computer science. Always learning, always sprouting :></p>
-    <div class="skills">
-      <span class="skill">Python</span>
-      <span class="skill">Java</span>
-      <span class="skill">HTML</span>
-      <span class="skill">CSS</span>
-      <span class="skill">JavaScript</span>
-      <span class="skill">Bootstrap</span>
-      <span class="skill">React</span>
-      <span class="skill">Node.js</span>
-      <span class="skill">Flask</span>
-      <span class="skill">SQL</span>
-    </div>
-  </section>
+    <section id="welcome-section">
+        <div id="message-container">
+            <h1>Take a look inside my dev journey</h1>
+            <p><span class="symbol">&lt;</span>Hi! I am Vince Evangelista, a computer science student trying to contribute to the world through code. <span>(and do random projects when bored)</span><span class="symbol">&#47;&gt;</span></p>
+        </div>    
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Fitness Web App</h3>
-        <p>A website for gym goers and fitness enthusiasts that want to organize their workout routines, track their meals, and monitor their weight. Built with Flask, Jinja, and SQLite.</p>
-        <a href="https://github.com/28BEANS/fitness-website">GitHub</a>
-      </div>
-      
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>This very site! A personal portfolio to showcase my skills and projects.</p>
-        <a href="#">GitHub</a>
-      </div>
-    </div>
-  </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div id="project-grid">
+            <div class="project-tile">
+                
+                <div class="desc-box">
+                    <p><a href="https://codepen.io/28BEANS/full/WbrGjBZ" target="_blank">Survey Form <span>&#8599;</span></a></p>
+                    
+                </div>
+            </div>
+            <div class="project-tile">
+                
+                <div class="desc-box">
+                    <p><a href="https://codepen.io/28BEANS/full/VYeKWwL" target="_blank">Tribute Page <span>&#8599;</span></a></p>
+                </div>
+            </div>
+            <div class="project-tile">
+                
+                <div class="desc-box">
+                    <p><a href="https://codepen.io/28BEANS/full/QwyKgwQ" target="_blank">Technical Documentation Page <span>&#8599;</span></a></p>
+                </div>
+            </div>
+            <div class="project-tile">
+                <div class="desc-box">
+                    <p><a href="https://codepen.io/28BEANS/full/VYeKWLv" target="_blank">Product Landing Page <span>&#8599;</span></a></p>
+                </div>
+            </div>
+            <div class="project-tile">
+                <div class="desc-box">
+                    <p><a href="https://github.com/28BEANS/fitness-website" target="_blank">FitTrack <span>&#8599;</span></a></p>
+                </div>
+            </div>
+            <div class="project-tile">
+                <div class="desc-box">
+                    <p><a href="https://github.com/kirkdencv/shared-expense-splitter" target="_blank">Expense Splitter App <span>&#8599;</span></a></p>
+                </div>
+            </div>
+            <div class="project-tile">
+                <div class="desc-box">
+                    <p><a href="https://28beans.github.io/audreytoo/" target="_blank">audrey too <span>&#8599;</span></a></p>
+                </div>
+            </div>
+            <div class="project-tile">
+                <div class="desc-box">
+                    <p><a href="https://github.com/28BEANS/PathPoint" target="_blank">PathPoint <span>&#8599;</span></a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="in-progress">
-    <h2>In Progress</h2>
-    <p>Here are projects I'm actively working on. They're not finished yet, but they show what I'm currently learning and building.</p>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Expense Splitter App</h3>
-        <p>A web app to track and split expenses among friends. Built with MERN stack.</p>
-        <a href="https://github.com/kirkdencv/shared-expense-splitter">GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>audrey too</h3>
-        <p>A simple and interactive website for plant aficionados. I utilized vanilla HTML, CSS, and JavaScript.</p>
-        <a href="https://github.com/28BEANS/audreytoo">GitHub</a> | <a href="https://28beans.github.io/audreytoo/">Website</a>
-      </div>
-      <div class="project-card">
-        <h3>PathPoint</h3>
-        <p>PathPoint is a mobile application that helps users find the most efficient commuting routes and estimate travel fares. Built with Flutter and Firebase</p>
-        <a href="https://github.com/28BEANS/PathPoint">GitHub</a>
-      </div>
-    </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to connect, feel free to reach out!</p>
-    <p>Email: <a href="mailto:vinceevangelista028@gmail.com">vinceevangelista028@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/28BEANS" target="_blank">28BEANS</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/vince-evangelista-b80b1632a/" target="_blank">vince-evangelista</a></p>
-  </section>
+    <section id="contact">
+        <div id="contact-desc">
+            <div id="contact-desc-container">
+                <h2>Contact Me</h2>
+                <p><span class="symbol">&lt;</span>Feel free to reach out through any channels provided<span class="symbol">&#47;&gt;</span></p>
+            </div>
+        </div>
+        <div id="contact-channels">
+            <div class="contact-tiles">
+                <img src="https://raw.githubusercontent.com/28BEANS/media/refs/heads/main/linkedin-logo.svg" alt="linkedin logo">
+                <p><a href="https://www.linkedin.com/in/vince-evangelista-b80b1632a/" target="_blank">Linkedin</a></p>
+            </div>
+            <div class="contact-tiles">
+                <img src="https://raw.githubusercontent.com/28BEANS/media/refs/heads/main/github-mark.svg" alt="github logo">
+                <p><a href="https://github.com/28BEANS" target="_blank">GitHub</a></p>
+            </div>
+            <div class="contact-tiles">
+                <img src="https://raw.githubusercontent.com/28BEANS/media/refs/heads/main/fcc_primary_small.svg" alt="fcc logo">
+                <p><a id="profile-link" href="https://www.freecodecamp.org/28beans" target="_blank">FreeCodeCamp</a></p>
+            </div>
+            <div class="contact-tiles">
+                <img src="https://raw.githubusercontent.com/28BEANS/media/refs/heads/main/at-symbol.svg" alt="at symbol">
+                <p><a href="mailto:vinceevangelista028@gmail.com">Email</a></p>
+            </div>
+            <div class="contact-tiles">
+                <img src="https://raw.githubusercontent.com/28BEANS/media/refs/heads/main/phone-icon.svg" alt="phone icon">
+                <p><a href="tel:09553642572">Phone</a></p>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Vince Evangelista. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('show');
-    });
-  </script>
+    <footer>
+        <p>&copy; 2025 Vince Evangelista. All Rights Reserved.</p>
+    </footer>
+    
 </body>
 </html>
